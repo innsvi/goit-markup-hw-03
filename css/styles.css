@@ -17,8 +17,9 @@ ul[class] {
   margin: 0;
 }
 
-ul li{
-    padding-inline-start: 0;
+a{
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 :root{
@@ -182,9 +183,7 @@ button{
     border-style: none;
 }
 
-.title-our{
-    display: none;
-}
+
 .section-title{
     
     font-size: 36px;
@@ -353,6 +352,7 @@ button{
 
 .address-end{
     margin-top: 20px;
+    padding: 0;
     width: 231px;
     height: 81px;
     left: 215px;
@@ -363,15 +363,19 @@ button{
     text-decoration: none;
 }
 
+
 .post-end{
+    display: inline-block;
+    padding: 0;
     margin-top: 9px;
 
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
 }
 .phone-end{
+    display: inline-block;
     margin-top: 9px;
-
+    padding: 0;
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
 
