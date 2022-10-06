@@ -225,6 +225,10 @@ button{
     letter-spacing: 0.03em;
 }
 
+.title-our{
+    display: none;
+}
+
 .item-work{
     display: flex;
     justify-content: center;
@@ -307,7 +311,7 @@ button{
 }
 
 .features-title{
-    visibility: hidden;
+    display: none;
 }
 
 .features-item :hover
