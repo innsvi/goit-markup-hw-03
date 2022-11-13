@@ -158,6 +158,11 @@ a{
    background-color: #2F303A;
 }
 
+.hero-content{
+    padding-top: 200px;
+    padding-bottom:200px;
+}
+
 
 .hero-title{
     margin-bottom: 30px;
