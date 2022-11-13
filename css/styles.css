@@ -5,7 +5,7 @@ html{
 *,
 *::before,
 *::after {
-  box-sizing: inherit
+  box-sizing: border-box;
 }
 
 h1,
@@ -17,11 +17,6 @@ ul[class] {
   margin: 0;
 }
 
-a{
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
 :root{
     --primary-text-color: #212121;
     --accent-color: #2196F3;
@@ -29,6 +24,7 @@ a{
     --white-text-color: #FFFFFF;
     --primary-bg-color: #FFFFFF;
 }
+
 body {
     font-style: unset;
     background-color: var(--primary-bg-color);
@@ -51,6 +47,17 @@ body {
     padding-bottom: 94px;
 }
 
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+} 
+
 .header {
     display: block ;
     text-align: center;
@@ -66,7 +73,9 @@ body {
 
 a{
     text-decoration: none;
-    color: var(--primary-text-color)
+    color: var(--primary-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .nav-item :hover, :focus
@@ -106,7 +115,7 @@ a{
 }
 
 .nav-item {
-    display: block;
+    display: flexbox;
     margin-right: 50px;
     margin-top: 32px;
 
@@ -117,7 +126,7 @@ a{
 }
 
 .site-nav li :last-child{
-    margin-right: 0
+    margin-right: 0;
 }
 
 .contacts{
@@ -172,7 +181,8 @@ button{
     align-items: center;
     text-decoration: none;
 
-  
+    font-family: "Roboto";
+    font-weight: 700;
     padding: 10px 32px;
     height: 50px;
     background-color: var(--accent-color);
