@@ -15,7 +15,13 @@ h4,
 p,
 ul[class] {
   margin: 0;
+ padding: 0;
 }
+
+ul{
+    list-style: none;
+}
+
 
 :root{
     --primary-text-color: #212121;
@@ -33,6 +39,9 @@ body {
     font-size: 14px;
     margin: 0%;
 }
+
+
+
 
 .container{
     width: 1200px;
@@ -58,17 +67,18 @@ body {
     overflow: hidden;
 } 
 
+
+/* HEADER */
+
+
 .header {
-    display: block ;
-    text-align: center;
-    font-weight: 500;
     border-bottom: 1px solid #ECECEC;;
 }
 
-.main-navi{
+.container-header{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 a{
@@ -82,6 +92,11 @@ a{
 { color: var(--accent-color);
 }
 
+.contact{
+    color:#757575;
+}
+
+
 .contact-item :hover, :focus
 { color: var(--accent-color);
 }
@@ -90,7 +105,7 @@ a{
 .logo {
     padding-top: 24px;
     padding-bottom: 25px;
-    color: var(--primary-text-color);
+    color: var(--accent-color);
     font-family: 'Raleway';
     font-size: 26px;
     line-height: 1.2;
@@ -98,8 +113,8 @@ a{
     text-decoration: none;
 }
 
-.logo-decor {
-    color: var(--accent-color);
+.decor {
+    color: var(--primary-text-color);
 }
 
 
@@ -108,7 +123,6 @@ a{
     display: flex;
 
     padding-bottom: 32px;
-    list-style: none;
     text-decoration: none;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -117,7 +131,6 @@ a{
 .nav-item {
     display: flexbox;
     margin-right: 50px;
-    margin-top: 32px;
 
     font-weight: 500;
     line-height: 16px;
@@ -135,13 +148,11 @@ a{
     padding-inline-start: 0;
     padding-bottom: 32px;
 
-    list-style: none;
     line-height: 1.2;
     letter-spacing: 0.02em;
 }
 
 .contact-item{
-    margin-top: 32px;
     margin-left: 50px;
 }
 
@@ -151,22 +162,27 @@ a{
     color:#2196F3
 }
 
-.hero{
-    display: block;
-   text-align: center;
-
-   background-color: #2F303A;
+.post,.phone{
+    color:#757575;
 }
+
+/* HERO */
+
+
 
 .hero-content{
     padding-top: 200px;
     padding-bottom:200px;
+    text-align: center;
+    background-color: #2F303A;
 }
 
 
 .hero-title{
+    max-width: 696px;
     margin-bottom: 30px;
-
+    margin-left: auto;
+    margin-right: auto;
     color: var(--white-text-color);
     font-size: 44px;
     font-weight: 900;
@@ -181,15 +197,11 @@ button{
 }
 
 .section-button{
-    display: inline-block;
     border-radius: 4px;
-    align-items: center;
-    text-decoration: none;
 
     font-family: "Roboto";
     font-weight: 700;
     padding: 10px 32px;
-    height: 50px;
     background-color: var(--accent-color);
     color: var(--white-text-color);
     font-size: 16px;
@@ -198,9 +210,14 @@ button{
     border-style: none;
 }
 
+.section-button :hover
+.section-button :focus 
+
+
+
+/* НАШІ ПЕРЕВАГИ */
 
 .section-title{
-    
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
@@ -208,24 +225,17 @@ button{
 }
 
 .section-list{
-    padding-left: 0;
     display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
 }
 
 
-.section-item: :not(first-child){
+.section-item:not(:first-child){
     margin-left: 30px;
 }
 
 
 .subtitle{
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.03em;
@@ -233,7 +243,6 @@ button{
 }
 
 .text{
-    margin-top: 10px;
     margin-bottom: 0;
     color: #757575;
     font-weight: 400;
@@ -242,24 +251,33 @@ button{
     letter-spacing: 0.03em;
 }
 
-.title-our{
-    display: none;
+/* ЧИМ МИ ЗАЙМАЄМОСЬ */
+
+.our-works{
+    padding-top: 0;
 }
 
-.item-work{
-    display: flex;
-    justify-content: center;
-}
-
-.works{
-    margin-top: 50px;
-}
-
-.team-title{
+.our-title{
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+img{
+    display: block;
+}
+
+/* КОМАНДА */
+
+.team-title{
+    margin-bottom:50px ;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
 }
 
 .team{
@@ -268,9 +286,6 @@ button{
 .team-list{
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
 
 .team-card{
@@ -289,8 +304,7 @@ button{
 }
 
 .team-subtitle{
-    margin-top: 30px;
-
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
@@ -298,10 +312,12 @@ button{
     letter-spacing: 0.03em;
 }
 
-.team-text{
-    margin-top: 10px;
-    margin-bottom: 30px;
+.team-aftercard{
+    margin-top: 30px;
+    margin-bottom:30px;
+}
 
+.team-text{
     color: #757575;
     font-weight: 400;
     font-size: 16px;
@@ -310,9 +326,13 @@ button{
     letter-spacing: 0.03em;
 }
 
+
+/* FOOTER */
+
 .footer{
     background-color: #2F303A;
 }
+
 
 .logo-footer{
     color: #FFFFFF;
@@ -326,23 +346,57 @@ button{
     line-height: 1.8;
     letter-spacing: 0.03em;
 }
-
-.features-title{
-    display: none;
+.foot{
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
-.features-item :hover
-.features-item :focus{
-    background-color: #2196F3;
-    color: #FFFFFF;
+.logo-end{
+    margin-bottom: 20px;
 }
+
+.address-end{
+    color: var(--white-text-color);
+    text-decoration: none;
+    font-style: normal;
+    padding: 0;
+}
+
+.post-end{
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    padding: 0;
+}
+.phone-end{
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    padding: 0;
+}
+
+.address-end,
+.phone-end,
+.post-end:hover,:focus {
+}
+
+.address-footer:not(:last-child){
+    margin-bottom: 9px;
+}
+
+
+/* ПОРТФОЛІО */
+
+.current{
+    color: var(--accent-color);
+}
+
+
 
 .features{
     margin-bottom: 50px;
 }
 .features-item{
     border-style: none;
-    margin-left: 8px;
 
     color: #212121;
     font-weight: 500;
@@ -366,55 +420,14 @@ button{
     letter-spacing: 0.03em;
 }
 
-.logo-end{
-    padding-top: 60px;
-}
-
-
-.address-end{
-    margin-top: 20px;
-    padding: 0;
-    width: 231px;
-    height: 81px;
-    left: 215px;
-    top: 2205px;
-
-    font-style: normal;
-    color: var(--white-text-color);
-    text-decoration: none;
-}
-
-
-.post-end{
-    display: inline-block;
-    padding: 0;
-    margin-top: 9px;
-
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.6);
-}
-.phone-end{
-    display: inline-block;
-    margin-top: 9px;
-    padding: 0;
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.6);
-
-}
-
-.features{
-    padding-top:0;
-}
 
 .features-names{
     display: flex;
     justify-content: center;
-    list-style: none;
     padding-inline-start: 0;
 }
 
-.features-button:hover,
-.features-button:focus{
+.features-button:hover,:focus{
     color: var(--accent-color);
 }
 
@@ -422,7 +435,6 @@ button{
     display: inline-block;
     border-radius: 4px;
     align-items: center;
-    margin-left: 8px;
 
     
     font-size: 16px;
@@ -432,10 +444,15 @@ button{
     background: #F5F4FA;
 }
 
-.features-item:hover{
+.features-button:not(:last-child){
+    margin-right: 8px;
+}
+
+.features-item:hover,:focus{
     background-color: var(--accent-color);
     color: var(--white-text-color);
 }
+
 .features-item{
     padding: 6px 22px; 
     border-radius: 4px;
@@ -454,39 +471,30 @@ button{
 }
 
 .examples{
-    margin-block-start: 0;
-    margin-block-end: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding-left: 0;
-    list-style: none;
+  
     margin-top: 50px;
     
 }
 
 .examples-item {
-    box-sizing: border-box;
-    padding-left: 0;
-    width: 370px;
-    height: 404px;
-    border: 1px solid #EEEEEE;
-   
+    width: 370px;  
 }
 
 .examples-item :last-child{
     margin-right: 0;
 }
 
-.examples{
-    margin-left: 0;
+
+.examples-aftercard{
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
 }
 
 .examples-subtitle{
-    padding-left: 24px;
-    margin-top: 20px;
-    margin-bottom: 0;
-
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
@@ -495,9 +503,6 @@ button{
 }
 
 .examples-text{
-    padding-left:24px;
-    margin-top: 0;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
