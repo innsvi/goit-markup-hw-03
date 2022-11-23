@@ -132,8 +132,6 @@ img{
 
 .contacts{
     display: flex;
-    padding-bottom: 32px;
-    padding-top: 32px;
     margin-left: auto;
 }
 
@@ -149,6 +147,14 @@ img{
     margin-right: 50px;
 }
 
+.post{
+    display: block;
+}
+
+.phone{
+    display: block;
+}
+
 .post:hover,
 .post:focus{
     color: var(--accent-color);
@@ -161,6 +167,8 @@ img{
 .post,.phone{
     color:var(--article-text-color);
 }
+
+
 
 
 
