@@ -139,6 +139,7 @@ img{
 
 .contact-item{
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em; 
     text-decoration: none;
@@ -343,6 +344,10 @@ button{
     padding-bottom: 60px;
 }
 
+.logo-foot{
+    padding:0;
+}
+
 .logo-footer{
     color: var(--white-text-color);
 }
@@ -472,8 +477,6 @@ button{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    
-    margin-top: 50px;
 }
 
 .examples-item {
